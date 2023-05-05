@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>勇者的冒险故事</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      #button {
+        background-color: black;
+        color: white;
+        display: block;
+        margin: 0 auto;
+      }
+      #textbox1, #textbox2 {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+      }
+      #continue-button1, #continue-button2 {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background-color: transparent;
+        border: none;
+        color: gray;
+      }
+      #good-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button" onclick="showTextBox1()">村长</button>
+    <div id="textbox1">
+      <p>你终于来了，伟大的勇者大人</p>
+      <p>我是嘎嘎香村的村长——老豆瓣酱</p>
+      <p>我们的村子被地沟油大魔王入侵了，所有的美食都被夺走了！</p>
+      <button id="continue-button1" onclick="showTextBox2()">继续</button>
+    </div>
+    <div id="textbox2">
+      <p>只有你，传说中的勇者，只有你能创造奇迹。</p>
+      <p>你需要跨过湍急的牛油河上的过桥排骨，找到老锅盔</p>
+      <p>你需要翻越高耸的竹山，拜师夺笋仙人</p>
+      <p>最终你需要穿越辣条森林，找到传说中的<button id="good-button" onclick="alert('你打败了魔王，拯救了世界！好耶！')">猪油渣圣剑</button>才能打败魔王，拯救世界！</p>
+      <button id="continue-button2" onclick="alert('没有找到圣剑的你，赤手空拳的面对可怕的魔王，你失败了QAQ。')">出发</button>
+    </div>
+    <script>
+      function showTextBox1() {
+        var textBox1 = document.getElementById("textbox1");
+        textBox1.style.display = "block";
+      }
+      function showTextBox2() {
+        var textBox1 = document.getElementById("textbox1");
+        textBox1.style.display = "none";
+        var textBox2 = document.getElementById("textbox2");
+        textBox2.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
